@@ -70,9 +70,11 @@ RUN /opt/fyp/illada-venv/bin/python -c \
 RUN micromamba clean -a -y
 
 
-# Automatically start iLLaDA after RunPod startup.
-COPY post_start.sh /post_start.sh
-RUN chmod 755 /post_start.sh
+
+# Start iLLaDA automatically using RunPod's pre-start hook
+COPY post_start.sh /pre_start.sh
+RUN chmod 755 /pre_start.sh
+
 
 
 # Preserve the RunPod base image's startup configuration.
