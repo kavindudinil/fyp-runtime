@@ -37,4 +37,4 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/${{ steps.vars.outputs.owner }}/fyp-runtime:v1
+          tags: ghcr.io/${{ steps.vars.outputs.owner }}/fyp-runtime:v2
